@@ -20,7 +20,8 @@ import locale
 # M5SerialServerのインスタンスを作成する。
 m5 = M5SerialServer()
 
-def get_time():
+
+def get_time() -> str:
     """
     現在時刻を返す独自関数
     引数:なし
@@ -33,7 +34,9 @@ def get_time():
     return (dt_now.strftime('%H:%M:%S'))
 
 ### ここから問題  ###
-def main(args=None):
+
+
+def main() -> None:
     """
     メイン関数
     """
@@ -55,7 +58,8 @@ def main(args=None):
         # 背景をリセットしない
         refresh = False
         # set_display_textを実行
-        result = m5.set_display_text(text, pos_x, pos_y, size, text_color, back_color, refresh)
+        result = m5.set_display_text(
+            text, pos_x, pos_y, size, text_color, back_color, refresh)
         # 0.3秒停止
         time.sleep(0.3)
 

@@ -15,7 +15,8 @@ from m5serial_server_py.m5serial_server_py import M5SerialServer
 # sleep関数を使うためにtimeのライブラリをインポートする。
 import time
 
-def main(args=None):
+
+def main() -> None:
     """
     メイン関数
     """
@@ -39,7 +40,8 @@ def main(args=None):
     # 背景をリセット
     refresh = True
     # set_display_textを実行
-    result = m5.set_display_text(text, pos_x, pos_y, size, text_color, back_color, refresh)
+    result = m5.set_display_text(
+        text, pos_x, pos_y, size, text_color, back_color, refresh)
     ### ここまで  ###
 
 

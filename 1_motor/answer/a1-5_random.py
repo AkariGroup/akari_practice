@@ -11,7 +11,7 @@ Q1-5. 3秒に1回パン、チルトで-0.5rad~0.5radのランダムな角度を�
          これを2回使って、パンとチルトの角度を作りましょう。
 """
 ### ここから問題  ###
-
+from typing import Any
 # モータ制御の際はakari_controllerのライブラリをインポートする
 from akari_controller.akari_controller import AkariController
 # sleep関数を使うためにtimeのライブラリをインポートする。
@@ -19,7 +19,8 @@ import time
 # 乱数生成用のライブラリをインポートする。
 import random
 
-def main(args=None):
+
+def main() -> None:
     """
     メイン関数
     """
@@ -33,7 +34,7 @@ def main(args=None):
         # 問題文に指定はないが、一応print。
         print("pan: " + str(pan_angle) + "tilt: " + str(tilt_angle))
         # 生成したランダムな方向を向く
-        dict1 = {}
+        dict1: Any = {}
         dict1["joint_names"] = ["pan", "tilt"]
         dict1["values"] = [pan_angle, tilt_angle]
         akari.set_goal_position(dict1)

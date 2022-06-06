@@ -30,7 +30,8 @@ import csv
 # logファイルの名前を定義
 FILE_NAME = 'log.csv'
 
-def main(args=None):
+
+def main() -> None:
     """
     メイン関数
     """
@@ -39,7 +40,7 @@ def main(args=None):
     # log.csvを作成して、インデックス行を書き込む
     with open(FILE_NAME, 'w') as f:
         writer = csv.writer(f)
-        writer.writerow(['時刻','温度'])
+        writer.writerow(['時刻', '温度'])
     # Ctrl + Cで終了するまでループし続ける
     while(True):
         m5_data = m5.get()
@@ -49,11 +50,12 @@ def main(args=None):
         dt_now = datetime.datetime.now()
         # 時:分:秒の形に変換
         cur_time = dt_now.strftime('%H:%M:%S')
-        print('[' + cur_time + '] temperature: ' + str(cur_temperature) + ' [deg]' )
+        print('[' + cur_time + '] temperature: ' +
+              str(cur_temperature) + ' [deg]')
         # logファイルを開いて取得した時刻、温度を最終行に追記
         with open(FILE_NAME, 'a') as f:
             writer = csv.writer(f)
-            writer.writerow([cur_time,cur_temperature])
+            writer.writerow([cur_time, cur_temperature])
         # 10秒停止処理を入れる。
         time.sleep(10)
 

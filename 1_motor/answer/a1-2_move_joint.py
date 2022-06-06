@@ -10,10 +10,12 @@ Q1-2. Q1-1で取得した関節名を使って、ヘッドを左に45°向かせ
 
 # sleep関数を使うためにtimeのライブラリをインポートする。
 import time
+from typing import Any
 # モータ制御の際はakari_controllerのライブラリをインポートする
 from akari_controller.akari_controller import AkariController
 
-def main(args=None):
+
+def main() -> None:
     """
     メイン関数
     """
@@ -22,7 +24,7 @@ def main(args=None):
     akari = AkariController()
 
     ### ここから問題  ###
-    dict1 = {}
+    dict1: Any = {}
     dict1["joint_names"] = ["pan"]
     dict1["values"] = [0.785]
     akari.set_goal_position(dict1)

@@ -8,11 +8,13 @@ Q1-4. 下40°を向く→3秒待つ→上20°を向く→３秒待つ→下40°�
 """
 
 # モータ制御の際はakari_controllerのライブラリをインポートする
+from typing import Any
 from akari_controller.akari_controller import AkariController
 # sleep関数を使うためにtimeのライブラリをインポートする。
 import time
 
-def main(args=None):
+
+def main() -> None:
     """
     メイン関数
     """
@@ -21,11 +23,11 @@ def main(args=None):
     akari = AkariController()
     # 両方のモータ速度を5rad/sに変更する。
     akari.set_profile_velocity({"joint_names": ["pan", "tilt"],
-                            "values": [5, 5]})
+                                "values": [5, 5]})
     ### ここから問題  ###
     while(True):
         # 下40°を向く
-        dict1 = {}
+        dict1: Any = {}
         dict1["joint_names"] = ["tilt"]
         dict1["values"] = [-0.698]
         akari.set_goal_position(dict1)
