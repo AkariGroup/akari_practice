@@ -8,8 +8,7 @@ Q1-4. 下40°を向く→3秒待つ→上20°を向く→３秒待つ→下40°�
 """
 
 # モータ制御の際はakari_controllerのライブラリをインポートする
-from typing import Any
-from akari_controller.akari_controller import AkariController
+from akari_controller.akari_controller import AkariController, ComDictFloat
 # sleep関数を使うためにtimeのライブラリをインポートする。
 import time
 
@@ -27,7 +26,7 @@ def main() -> None:
     ### ここから問題  ###
     while(True):
         # 下40°を向く
-        dict1: Any = {}
+        dict1: ComDictFloat = {}
         dict1["joint_names"] = ["tilt"]
         dict1["values"] = [-0.698]
         akari.set_goal_position(dict1)
