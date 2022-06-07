@@ -30,7 +30,7 @@ import os
 DEVICE_ID = 20
 
 
-def take_photo(name: str):
+def take_photo(name: str) -> bool:
     """
     写真を撮って保存する関数。
     保存先はoutputディレクトリ以下。
@@ -55,7 +55,7 @@ def take_photo(name: str):
         return True
 
 
-def main(args=None):
+def main() -> None:
     """
     メイン関数
     """

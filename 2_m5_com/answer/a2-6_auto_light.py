@@ -17,7 +17,8 @@ from m5serial_server_py.m5serial_server_py import M5SerialServer
 # sleep関数を使うためにtimeのライブラリをインポートする。
 import time
 
-def main(args=None):
+
+def main() -> None:
     """
     メイン関数
     """

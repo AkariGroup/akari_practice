@@ -15,7 +15,8 @@ import time
 # M5SerialServerのインスタンスを作成する。
 m5 = M5SerialServer()
 
-def get_pressure():
+
+def get_pressure() -> str:
     """
     圧力センサの値を返す独自関数
     引数:なし
@@ -23,9 +24,10 @@ def get_pressure():
     """
     m5_data = m5.get()
     # 圧力センサ値を小数点以下２桁にして、単位hPaを付けて返す。
-    return (str(round(m5_data['pressure']/100,2)) + 'hPa')
-    
-def main(args=None):
+    return (str(round(m5_data['pressure'] / 100, 2)) + 'hPa')
+
+
+def main() -> None:
     """
     メイン関数
     """
@@ -49,7 +51,8 @@ def main(args=None):
         # 背景をリセットする
         refresh = True
         # set_display_textを実行
-        result = m5.set_display_text(text, pos_x, pos_y, size, text_color, back_color, refresh)
+        result = m5.set_display_text(
+            text, pos_x, pos_y, size, text_color, back_color, refresh)
         # 1秒停止
         time.sleep(1)
     ### ここまで  ###
