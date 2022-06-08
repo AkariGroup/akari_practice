@@ -13,7 +13,7 @@ Q2-4.テストヘッドのpwmout0のLEDを0-250まで10刻みで明るくして�
          を使うのがいいでしょう。これは数値iがstartからendまで、stepずつ増加するループ処理です。
 """
 
-# M5と通信する際はm5serial_server_pyのライブラリをインポートする
+# M5と通信する際はm5serial_server_pyのライブラリをインポートする。
 from m5serial_server_py.m5serial_server_py import M5SerialServer
 # sleep関数を使うためにtimeのライブラリをインポートする。
 import time

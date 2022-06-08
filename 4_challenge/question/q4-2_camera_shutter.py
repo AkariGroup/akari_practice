@@ -19,7 +19,7 @@ Q4-2.キーボードで特定のキーを入力した際に写真を撮影して
             # '001'とプリントされる
 """
 
-# M5と通信する際はam5serial_server_pyのライブラリをインポートする
+# M5と通信する際はm5serial_server_pyのライブラリをインポートする。
 from m5serial_server_py.m5serial_server_py import M5SerialServer
 # openCVのライブラリをインポート
 import cv2
@@ -30,7 +30,7 @@ import os
 DEVICE_ID = 20
 
 
-def take_photo(name: str):
+def take_photo(name: str) -> bool:
     """
     写真を撮って保存する関数。
     保存先はoutputディレクトリ以下。
@@ -55,7 +55,7 @@ def take_photo(name: str):
         return True
 
 
-def main(args=None):
+def main() -> None:
     """
     メイン関数
     """

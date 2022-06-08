@@ -8,7 +8,7 @@ Q3-4.M5のディスプレイに圧力センサの値を表示しましょう。
 ヒント2: コメントを参考に、引数を穴埋めしましょう。
 """
 
-# M5と通信する際はm5serial_server_pyのライブラリをインポートする
+# M5と通信する際はm5serial_server_pyのライブラリをインポートする。
 from m5serial_server_py.m5serial_server_py import M5SerialServer
 # sleep関数を使うためにtimeのライブラリをインポートする。
 import time
