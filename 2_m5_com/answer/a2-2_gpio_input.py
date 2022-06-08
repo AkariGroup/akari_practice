@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 
 """
-Q2-2.テストヘッドのdin0ボタン入力があったときにコマンドラインに「din0がONです」と表示されるようにしましょう
+Q2-2.テストヘッドのdin0ボタン入力があったときにコマンドラインに「din0がONです」と表示されるようにしましょう。
 ヒント1: Q1を参考にしましょう。'button_a'の代わりに'din0'の値を使います。
 """
 
-# M5と通信する際はm5serial_server_pyのライブラリをインポートする
+# M5と通信する際はm5serial_server_pyのライブラリをインポートする。
 from m5serial_server_py.m5serial_server_py import M5SerialServer
 # sleep関数を使うためにtimeのライブラリをインポートする。
 import time

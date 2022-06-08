@@ -10,7 +10,7 @@ Q3-5. M5のディスプレイに時:分:秒を表示する時計を作りまし�
          変わります。少し難しいですが、よりかっこいいアプリを目指して色々試してみましょう。
 """
 
-# M5と通信する際はm5serial_server_pyのライブラリをインポートする
+# M5と通信する際はm5serial_server_pyのライブラリをインポートする。
 from m5serial_server_py.m5serial_server_py import M5SerialServer
 # sleep関数を使うためにtimeのライブラリをインポートする。
 import time

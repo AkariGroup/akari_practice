@@ -12,7 +12,7 @@ Q2-6.環境明るさの取得値をコマンドラインに表示し、
 ヒント3: 3000未満の時はLED0は消しましょう。
 """
 
-# M5と通信する際はm5serial_server_pyのライブラリをインポートする
+# M5と通信する際はm5serial_server_pyのライブラリをインポートする。
 from m5serial_server_py.m5serial_server_py import M5SerialServer
 # sleep関数を使うためにtimeのライブラリをインポートする。
 import time

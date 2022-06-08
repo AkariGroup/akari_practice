@@ -12,7 +12,8 @@ import time
 # モータ制御の際はakari_controllerのライブラリをインポートする
 from akari_controller.akari_controller import AkariController
 
-def main(args=None):
+
+def main() -> None:
     """
     メイン関数
     """
@@ -21,10 +22,10 @@ def main(args=None):
     akari = AkariController()
     # 両方のモータ速度を5rad/sに変更する。
     akari.set_profile_velocity({"joint_names": ["pan", "tilt"],
-                            "values": [5, 5]})
+                                "values": [5, 5]})
     # AKARIを目標位置に移動する。
     akari.set_goal_position({"joint_names": ["pan", "tilt"],
-                         "values": [-0.5, 0.2]})
+                             "values": [-0.5, 0.2]})
     # 1秒待つ
     time.sleep(1)
     ### ここから問題  ###

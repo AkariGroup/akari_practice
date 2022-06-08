@@ -7,7 +7,7 @@ Q2-5.環境温度を取得して1秒ごとにコマンドラインに表示し�
          返り値の'temperature'の項目から温度[℃]が読めます。
 """
 
-# M5と通信する際はm5serial_server_pyのライブラリをインポートする
+# M5と通信する際はm5serial_server_pyのライブラリをインポートする。
 from m5serial_server_py.m5serial_server_py import M5SerialServer
 # sleep関数を使うためにtimeのライブラリをインポートする。
 import time

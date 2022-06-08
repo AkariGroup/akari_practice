@@ -10,7 +10,7 @@ Q3-5. M5のディスプレイに時:分:秒を表示する時計を作りまし�
          変わります。少し難しいですが、よりかっこいいアプリを目指して色々試してみましょう。
 """
 
-# M5と通信する際はm5serial_server_pyのライブラリをインポートする
+# M5と通信する際はm5serial_server_pyのライブラリをインポートする。
 from m5serial_server_py.m5serial_server_py import M5SerialServer
 # sleep関数を使うためにtimeのライブラリをインポートする。
 import time
@@ -20,14 +20,15 @@ import locale
 # M5SerialServerのインスタンスを作成する。
 m5 = M5SerialServer()
 
-def get_time():
+
+def get_time() -> str:
     """
     現在時刻を返す独自関数
     引数:なし
     返り値: 時:分:秒の文字列
     """
     # 現在時刻を取得。
-    # locale.setlocale(locale.LC_TIME, 'ja_JP.UTF-8')
+    locale.setlocale(locale.LC_TIME, 'ja_JP.UTF-8')
     dt_now = datetime.datetime.now()
     # 時:分:秒を返す。
     return (dt_now.strftime('%H:%M:%S'))

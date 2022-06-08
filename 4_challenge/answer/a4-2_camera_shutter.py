@@ -19,7 +19,7 @@ Q4-2.キーボードで特定のキーを入力した際に写真を撮影して
             # '001'とプリントされる
 """
 
-# M5と通信する際はam5serial_server_pyのライブラリをインポートする
+# M5と通信する際はm5serial_server_pyのライブラリをインポートする。
 from m5serial_server_py.m5serial_server_py import M5SerialServer
 # openCVのライブラリをインポート
 import cv2

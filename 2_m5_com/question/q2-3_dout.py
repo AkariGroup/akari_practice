@@ -9,19 +9,20 @@ Q2-3.テストヘッドのdout0のLEDを2秒ごとにONOFFするコードを書�
 ヒント3: 処理を停止するにはtime.sleep(sec)関数を使います。secに秒数を入れるとその時間だけ処理が停止します。
 """
 
-# M5と通信する際はm5serial_server_pyのライブラリをインポートする
+# M5と通信する際はm5serial_server_pyのライブラリをインポートする。
 from m5serial_server_py.m5serial_server_py import M5SerialServer
 # sleep関数を使うためにtimeのライブラリをインポートする。
 import time
 
-def main(args=None):
+
+def main() -> None:
     """
     メイン関数
     """
 
     # M5SerialServerのインスタンスを作成する。
     m5 = M5SerialServer()
-    
+
     ### ここから問題  ###
     while(True):
         """ (処理を書く)"""

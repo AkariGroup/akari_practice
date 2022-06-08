@@ -9,7 +9,7 @@ Q3-3.M5のディスプレイに'あか''きいろ''あお'と縦に3つ並べて
 ヒント2: 文字と背景の色は、画面の色変更と同じように黒なら'black'、白なら'white'を入れればOKです。
 """
 
-# M5と通信する際はm5serial_server_pyのライブラリをインポートする
+# M5と通信する際はm5serial_server_pyのライブラリをインポートする。
 from m5serial_server_py.m5serial_server_py import M5SerialServer
 # sleep関数を使うためにtimeのライブラリをインポートする。
 import time

@@ -7,7 +7,7 @@ Q2-1.ボタンAが押されたらコマンドラインに「ボタンAが押さ�
 ヒント2: if文を使って、ボタンAが押された場合だけコマンドラインに出力するようにしましょう。
 """
 
-# M5と通信する際はam5serial_server_pyのライブラリをインポートする
+# M5と通信する際はm5serial_server_pyのライブラリをインポートする。
 from m5serial_server_py.m5serial_server_py import M5SerialServer
 # sleep関数を使うためにtimeのライブラリをインポートする。
 import time

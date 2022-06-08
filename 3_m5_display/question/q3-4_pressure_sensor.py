@@ -8,28 +8,26 @@ Q3-4.M5のディスプレイに圧力センサの値を表示しましょう。
 ヒント2: コメントを参考に、引数を穴埋めしましょう。
 """
 
-# M5と通信する際はm5serial_server_pyのライブラリをインポートする
+# M5と通信する際はm5serial_server_pyのライブラリをインポートする。
 from m5serial_server_py.m5serial_server_py import M5SerialServer
 # sleep関数を使うためにtimeのライブラリをインポートする。
 import time
 # M5SerialServerのインスタンスを作成する。
 m5 = M5SerialServer()
 
-def get_pressure():
+
+def get_pressure() -> str:
     """
     圧力センサの値を返す独自関数
     引数:なし
     返り値: 圧力値の文字列
     """
-    result,m5_data = m5.get()
-    if(result):
-        # 圧力センサ値を小数点以下２桁にして、単位hPaを付けて返す。
-        return (str(round(m5_data['pressure'],2)) + 'hPa')
-    else:
-        # 取得に失敗した場合は、"No data"を返す。
-        return "No data"
+    m5_data = m5.get()
+    # 圧力センサ値を小数点以下２桁にして、単位hPaを付けて返す。
+    return (str(round(m5_data['pressure'] / 100, 2)) + 'hPa')
 
-def main(args=None):
+
+def main() -> None:
     """
     メイン関数
     """
@@ -44,7 +42,7 @@ def main(args=None):
         pos_x = -999
         # 上下表示位置は中央揃え
         pos_y = -999
-        # 文字サイズは4にする
+        # 文字サイズは3にする
         size = """(文字サイズを指定)"""
         # 文字色は白
         text_color = """(文字色を指定)"""
