@@ -12,7 +12,7 @@ Q1-1.ヘッドの２軸の関節名を取得して、コマンドラインに表
 from akari_controller.akari_controller import AkariController
 
 
-def main(args=None):
+def main() -> None:
     """
     メイン関数
     """

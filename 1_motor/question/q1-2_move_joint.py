@@ -23,7 +23,7 @@ def main() -> None:
     akari = AkariController()
 
     ### ここから問題  ###
-    dict1 = {}
+    dict1: ComDictFloat = {}
     dict1["joint_names"] = """(関節名のリスト)"""
     dict1["values"] = """(目標角度のリスト)""""
     """(モータを動かす関数)""""
